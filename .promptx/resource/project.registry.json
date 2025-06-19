@@ -1,0 +1,35 @@
+{
+  "version": "2.0.0",
+  "source": "project",
+  "metadata": {
+    "version": "2.0.0",
+    "description": "project 级资源注册表",
+    "createdAt": "2025-06-19T01:03:07.087Z",
+    "updatedAt": "2025-06-19T01:03:07.088Z",
+    "resourceCount": 1
+  },
+  "resources": [
+    {
+      "id": "python-automation-expert",
+      "source": "project",
+      "protocol": "role",
+      "name": "Python Automation Expert 角色",
+      "description": "专业角色，提供特定领域的专业能力",
+      "reference": "@project://.promptx/resource/domain/python-automation-expert/python-automation-expert.role.md",
+      "metadata": {
+        "createdAt": "2025-06-19T01:03:07.088Z",
+        "updatedAt": "2025-06-19T01:03:07.088Z",
+        "scannedAt": "2025-06-19T01:03:07.088Z"
+      }
+    }
+  ],
+  "stats": {
+    "totalResources": 1,
+    "byProtocol": {
+      "role": 1
+    },
+    "bySource": {
+      "project": 1
+    }
+  }
+}

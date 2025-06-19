@@ -1,0 +1,31 @@
+# DrissionPage自动化框架配置文件
+
+# 项目路径配置
+project_root: "."
+config_dir: "./config"
+data_dir: "./data"
+reports_dir: "./reports"
+logs_dir: "./logs"
+screenshots_dir: "./screenshots"
+downloads_dir: "./downloads"
+
+# 测试配置
+test_timeout: 30
+element_timeout: 10
+page_load_timeout: 30
+
+# 重试配置
+retry_times: 3
+retry_interval: 2.0
+
+# 日志配置
+log_level: "INFO"
+log_format: "{time:YYYY-MM-DD HH:mm:ss} | {level} | {name}:{function}:{line} | {message}"
+
+# 环境配置
+environment: "test"
+debug_mode: false
+
+# 浏览器配置
+headless: false
+auto_close_browser: true
