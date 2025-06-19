@@ -3,7 +3,7 @@
 支持多环境配置（开发、测试、生产等）
 """
 
-from typing import Dict, Any, Optional
+from typing import Dict, Any, Optional, List
 from pathlib import Path
 from pydantic import BaseModel, Field
 import yaml

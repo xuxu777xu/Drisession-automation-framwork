@@ -1,0 +1,43 @@
+# 测试环境配置
+name: "test"
+description: "测试环境配置"
+
+# 基础URL配置
+base_url: "https://www.baidu.com"
+api_base_url: "https://www.baidu.com/api"
+
+# 认证配置
+auth:
+  username: "test_user"
+  password: "test_password"
+
+# 测试数据配置
+test_data:
+  search_keywords:
+    - "DrissionPage"
+    - "Python自动化"
+    - "Web自动化测试"
+  users:
+    - username: "test_user1"
+      password: "password123"
+    - username: "test_user2"
+      password: "password456"
+
+# 超时配置
+timeouts:
+  page_load: 30
+  element_wait: 10
+  api_request: 30
+
+# 重试配置
+retry:
+  times: 3
+  interval: 2
+
+# 浏览器配置
+browser:
+  headless: false
+  window_size:
+    width: 1920
+    height: 1080
+  load_strategy: "normal"

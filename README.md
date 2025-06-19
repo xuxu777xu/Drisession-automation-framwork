@@ -20,8 +20,11 @@ drissionpage_framework/
 ├── config/                 # 配置管理模块
 │   ├── __init__.py
 │   ├── settings.py         # 全局设置
+│   ├── settings.yaml       # 配置文件
 │   ├── browser_config.py   # 浏览器配置
-│   └── environment_config.py # 环境配置
+│   ├── environment_config.py # 环境配置
+│   └── environments/       # 环境配置目录
+│       └── test.yaml       # 测试环境配置
 ├── core/                   # 核心功能模块
 │   ├── __init__.py
 │   ├── driver_manager.py   # 驱动管理器
@@ -34,10 +37,19 @@ drissionpage_framework/
 │   └── example_page.py     # 示例页面
 ├── utils/                  # 工具模块
 │   ├── __init__.py
-│   └── logger.py           # 日志工具
+│   ├── logger.py           # 日志工具
+│   ├── data_handler.py     # 数据处理
+│   ├── screenshot.py       # 截图管理
+│   └── report_generator.py # 报告生成
+├── tests/                  # 测试模块
+│   ├── __init__.py
+│   ├── conftest.py         # pytest配置
+│   └── test_example.py     # 示例测试
 ├── examples/               # 使用示例
 │   └── basic_usage.py      # 基础使用示例
 ├── requirements.txt        # 依赖包
+├── pytest.ini            # pytest配置
+├── run_tests.py           # 测试运行脚本
 └── README.md              # 项目文档
 ```
 
@@ -74,10 +86,29 @@ results = page.get_search_results()
 driver_manager.close_driver("test")
 ```
 
-### 3. 运行示例
+### 3. 检查环境
 
 ```bash
-python examples/basic_usage.py
+python run_tests.py --check
+```
+
+### 4. 运行示例
+
+```bash
+python run_tests.py --examples
+```
+
+### 5. 运行测试
+
+```bash
+# 运行冒烟测试
+python run_tests.py --smoke
+
+# 运行所有测试
+python run_tests.py --all
+
+# 并行运行测试
+python run_tests.py --parallel
 ```
 
 ## 🔧 配置管理
